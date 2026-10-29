@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover premium electric bikes for city rides, mountain adventures and everyday commuting at E-RIDE.">
+  <title>E-RIDE — Ride Further</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement">
+    <div class="announcement-inner">
+      <span>▣ Free shipping over 500€</span><span>⬡ 2 year warranty</span><span>↻ 30 day returns</span>
+      <div class="announcement-links"><a href="#help">Help</a><a href="#tracking">Track order</a><a href="#contact">Contact</a></div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <a class="logo" href="#" aria-label="E-RIDE home"><span class="logo-mark">E</span>-RIDE<small>RIDE FURTHER</small></a>
+    <button class="mobile-menu" id="mobileMenu" aria-label="Open menu">☰</button>
+    <nav class="main-nav" id="mainNav">
+      <a href="#bikes">E-Bikes <span>⌄</span></a><a href="#categories">Accessories <span>⌄</span></a>
+      <a href="#parts">Parts <span>⌄</span></a><a href="#sale">Sale</a><a href="#about">About</a>
+    </nav>
+    <label class="search-box"><input id="searchInput" type="search" placeholder="Search e-bikes, accessories..." aria-label="Search products"><button id="searchBtn" aria-label="Search">⌕</button></label>
+    <div class="header-actions">
+      <button aria-label="Account" title="Account" id="accountBtn">♙</button>
+      <button aria-label="Favorites" title="Favorites" id="favoritesBtn">♡ <i id="favoriteCount">0</i></button>
+      <button aria-label="Shopping cart" title="Shopping cart" id="cartBtn">🛒 <i id="cartCount">0</i></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow">EXPLORE WITHOUT LIMITS</p>
+        <h1>PREMIUM E-BIKES<br>FOR EVERY JOURNEY</h1>
+        <p class="hero-copy">Discover high-quality electric bikes for city rides, mountain adventures and everyday commuting.</p>
+        <div class="hero-buttons"><a class="btn btn-green" href="#bikes">Shop E-Bikes <span>→</span></a><a class="btn btn-outline" href="#categories">Explore Models</a></div>
+      </div>
+      <div class="hero-highlights">
+        <div><b>⌁</b><p><strong>TRAIL READY</strong><span>Go further</span></p></div>
+        <div><b>▤</b><p><strong>LONG RANGE</strong><span>Up to 120 km</span></p></div>
+        <div><b>⚙</b><p><strong>PREMIUM PARTS</strong><span>Built to last</span></p></div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div><span class="benefit-icon">♧</span><p><strong>Free shipping</strong><small>On orders over 500€</small></p></div>
+      <div><span class="benefit-icon">⬡</span><p><strong>2 year warranty</strong><small>Ride with confidence</small></p></div>
+      <div><span class="benefit-icon">□</span><p><strong>30 day returns</strong><small>Hassle free</small></p></div>
+      <div><span class="benefit-icon">☏</span><p><strong>Expert support</strong><small>We're here to help</small></p></div>
+    </section>
+
+    <section class="category-grid section-wrap" id="categories">
+      <a class="category-card city" href="#bikes" data-category="City"><div><h3>City E-Bikes</h3><p>Comfort & style for everyday rides</p><span class="category-cta">View <b>→</b></span></div></a>
+      <a class="category-card mountain" href="#bikes" data-category="Mountain"><div><h3>Mountain E-Bikes</h3><p>Built for adventure</p><span class="category-cta">View <b>→</b></span></div></a>
+      <a class="category-card trekking" href="#bikes" data-category="Trekking"><div><h3>Trekking E-Bikes</h3><p>For long distance journeys</p><span class="category-cta">View <b>→</b></span></div></a>
+      <a class="category-card folding" href="#bikes" data-category="Folding"><div><h3>Folding E-Bikes</h3><p>Compact & convenient</p><span class="category-cta">View <b>→</b></span></div></a>
+    </section>
+
+    <section class="products-section section-wrap" id="bikes">
+      <div class="section-heading"><div><p class="eyebrow">FIND YOUR NEXT RIDE</p><h2>Featured E-Bikes</h2></div><button class="text-link" id="viewAllBtn">View all <span>→</span></button></div>
+      <div class="filter-row"><span id="resultsLabel">Our most-loved rides</span><select id="sortSelect" aria-label="Sort products"><option value="featured">Featured</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option><option value="name">Name A–Z</option></select></div>
+      <div class="product-grid" id="productGrid"></div>
+      <p class="empty-state" id="emptyState" hidden>No bikes found. Try another search.</p>
+    </section>
+
+    <section class="newsletter" id="about">
+      <div><p class="eyebrow">JOIN THE RIDE</p><h2>Good rides start here.</h2><p>Get new arrivals, riding tips and exclusive offers in your inbox.</p></div>
+      <form id="newsletterForm"><input type="email" id="newsletterEmail" placeholder="Your email address" required aria-label="Your email address"><button class="btn btn-green" type="submit">Sign me up →</button></form>
+      <p class="newsletter-note" id="newsletterNote" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="footer-top"><a class="logo footer-logo" href="#"><span class="logo-mark">E</span>-RIDE<small>RIDE FURTHER</small></a><p>Find your freedom. One ride at a time.</p><div class="socials"><a href="#instagram">Instagram</a><a href="#youtube">YouTube</a><a href="#facebook">Facebook</a></div></div>
+    <div class="footer-columns"><div><strong>SHOP</strong><a href="#bikes">All e-bikes</a><a href="#categories">City bikes</a><a href="#categories">Mountain bikes</a><a href="#categories">Accessories</a></div><div><strong>HELP</strong><a href="#help">Contact us</a><a href="#tracking">Track your order</a><a href="#returns">Returns & warranty</a><a href="#faq">FAQs</a></div><div><strong>ABOUT E-RIDE</strong><a href="#about">Our story</a><a href="#sustainability">Sustainability</a><a href="#careers">Careers</a></div><div><strong>RIDE WITH CONFIDENCE</strong><p>Secure checkout<br>2-year warranty<br>Expert rider support</p></div></div>
+    <div class="footer-bottom"><span>© 2026 E-RIDE. Demo store.</span><span>Privacy · Terms · Cookies</span><span>Prices shown in EUR (€)</span></div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart" aria-hidden="true">
+    <div class="drawer-header"><h2>Your cart <span id="drawerCartCount">(0)</span></h2><button id="closeCart" aria-label="Close cart">✕</button></div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-empty" id="cartEmpty">Your next adventure starts here.<br><a href="#bikes" id="continueShopping">Explore e-bikes →</a></div>
+    <div class="cart-summary" id="cartSummary" hidden><div><span>Subtotal</span><strong id="cartSubtotal">0 €</strong></div><small>Shipping calculated at checkout.</small><button class="btn btn-green checkout-btn" id="checkoutBtn">Continue to checkout →</button></div>
+  </aside>
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <script src="script.js"></script>
+</body>
+</html>
